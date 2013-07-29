@@ -1,5 +1,5 @@
 <?php
-    $connection = null; //a global variable. From function we access it: $GLOBALS["connection"]
+    $connection = null; 
     
     function connectToDatabase()
     {
@@ -7,6 +7,7 @@
         $userName = "sqluser";
         $password = "abc123";
         $databaseName = "ozekisms";
+        
         
         //create connection and select database by given data
         $GLOBALS["connection"] = mysql_connect($serverName, $userName, $password);
@@ -44,7 +45,7 @@
     function insertMessage ($recipient, $messageType, $messageText)
     {
         $query = "insert into ozekimessageout (sender,receiver,msgtype,msg,status) ";
-        $query .= "values ('+919958070487','" . $recipient . "', '" . $messageType . "', '" . $messageText . "', 'send');";
+        $query .= "values ('+919958070487','" . $recipient . "', '" . $messageType . "', '" . $messageText . "', 'sent');";
         $result = mysql_query($query);
         if (!$result)
         {
@@ -68,8 +69,8 @@
         try
         {
             echo "<table border='1'>";
-            echo "<tr><td>ID</td><td>Sender</td><td>Receiver</td><td>Sent time</td><td>Received time</td><td>Operator</td>";
-            echo "<td>Status</td><td>Message type</td><td>Message text</td></tr>";
+            echo "<tr><td>ID</td><td>Sender</td><td>Receiver</td><td>Delivery Time</td><td>Receiving Time</td><td>Operator</td>";
+            echo "<td>Status</td><td>Message Type</td><td>Message Text</td></tr>";
             while ($row = mysql_fetch_assoc($result))
             {
                 echo "<tr>";
@@ -111,8 +112,8 @@
         try
         {
             echo "<table border='1'>";
-            echo "<tr><td>ID</td><td>Sender</td><td>Receiver</td><td>Sent time</td><td>Received time</td><td>Operator</td>";
-            echo "<td>Message type</td><td>Message text</td></tr>";
+            echo "<tr><td>ID</td><td>Sender</td><td>Receiver</td><td>Delivery Time</td><td>Receiving Time</td><td>Operator</td>";
+            echo "<td>Message Type</td><td>Message Text</td></tr>";
             while ($row = mysql_fetch_assoc($result))
             {
                 echo "<tr>";

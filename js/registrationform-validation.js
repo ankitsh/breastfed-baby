@@ -77,6 +77,12 @@ jQuery(document).ready(function($){
 		
 		
 	});  
+	// on success...
+	 function success(){
+	 	$("#sent-form-msg").fadeIn();
+	 	$("#contactForm").fadeOut();
+	 }
+	
 	
     return false;
 });

@@ -1,23 +1,19 @@
 <!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]> <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+ <html class="no-js" lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
 	
 	
 	
 	<title>Registration Form</title>
-	<meta name="description" content=""/>
 	
 	<!-- Mobile viewport optimized-->
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" media="screen" href="css/superfish.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/style.css" media="all"/>
 	<link rel="stylesheet" media="all" href="css/lessframework.css"/>
-	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/bootstrap.css" media="all"/>
 	<link rel="stylesheet" href="datepicker/css1.css"/>
     <link rel="stylesheet" href="datepicker/css2.css"/>
 	
@@ -51,6 +47,7 @@
 							<li><a href="about.html">BreasrFeeding</a></li>
 							<li><a href="about-malnutrition.html">Malnutrition</a></li>
 							<li><a href="about-tensteps.html">Successful Steps</a></li>
+							<li><a href="about-initiative.html">Our Initiative</a></li>
 						</ul>
 					</li>
 					<li><a href="vedios.html">RELATED VEDIOS<i><b></b></i></a></li>
@@ -76,7 +73,7 @@
 				<h2 class="heading">Registration Form</h2>
 				
 				<!-- form -->
-				<form id="contactForm" action="form.php" method="post" onsubmit="return formValidator()">
+				<form id="contactForm" action="form.php" method="post" onSubmit="return formValidator()">
 					<fieldset>
 														
 						 <label class="control-label" for="mother_name">Mother's Name <span class="form-required">*</span></label>
@@ -184,7 +181,6 @@
 					</fieldset>
 					
 				</form>
-				<p id="sent-form-msg" class="success">Form Data Has Been Sent. Thank You For Registering With Us !!!. Kindly Check Your E-mail to Proceed Further...</p>
 				<!-- ENDS form -->	
 				<div class="c-1"></div>
 				<div class="c-2"></div>
@@ -209,9 +205,9 @@
 			<div class="sb-holder cf">
 				<ul id="social-bar" class="cf">
 					<li class="left-corner"><i></i></li>
-					<li><a href="http://www.facebook.com"  title="Become a fan" ><img src="img/social/Facebook.png"  alt="Facebook" /></a></li>
-					<li><a href="http://www.twitter.com" title="Follow my tweets" ><img src="img/social/Twitter.png"  alt="twitter" /></a></li>
-					<li><a href="http://www.google.com"  title="Add to the circle" ><img src="img/social/Google+.png" alt="Google plus" /></a></li>
+					<li><a href="https://www.facebook.com/praveen.chaubey.180"  title="Follow My Posts" ><img src="img/social/Facebook.png"  alt="Facebook" /></a></li>
+					<li><a href="https://twitter.com/PraveenKChaubey" title="Follow my tweets" ><img src="img/social/Twitter.png"  alt="twitter" /></a></li>
+					<li><a href="https://plus.google.com/u/0/118332533704030959947/posts/p/pub"  title="Add to the circle" ><img src="img/social/Google+.png" alt="Google plus" /></a></li>
 					<li class="right-corner"><i></i></li>
 				</ul>
 				
@@ -329,7 +325,12 @@ function formValidator(){
   }
 }
   }
-  
+  // on success...
+	 function success(){
+	 	$("#sent-form-msg").fadeIn();
+	 	$("#contactForm").fadeOut();
+	 }
+	
   return false;
   
 }

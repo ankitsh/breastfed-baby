@@ -28,7 +28,12 @@ jQuery(document).ready(function($){
 		
 		
 		// message
-		var comments = $("#comments").val();
+		var comments = $("input#comments").val();
+		if(comments == ""){
+			$("#error").fadeIn().text("Comments required");
+			$("input#comments").focus();
+			return false;
+		}
 		
 		// send mail php
 		var sendMailUrl = $("#sendMailUrl").val();

@@ -1,6 +1,6 @@
 <?php
 // Create connection
-$con=mysqli_connect("localhost","Boffins","Boffins","Boffins");
+$con=mysqli_connect("localhost","root","","breast_feeding");
 
 // Check connection
 if (mysqli_connect_errno($con))

@@ -1,19 +1,18 @@
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
-	<meta charset="utf-8"/>
+	<meta charset="utf-8">
 	
 	
 	
 	<title>Sending SMS After Registration</title>
-	<meta name="description" content=""/>
 	
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 	<link rel="stylesheet" media="screen" href="css/superfish.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/style.css" media="all"/>
 	<link rel="stylesheet" media="all" href="css/lessframework.css"/>
-	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/bootstrap.css" media="all"/>
 	<script src="js/modernizr-2.5.3.min.js"></script>
 	
 <?php

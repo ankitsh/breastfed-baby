@@ -1,6 +1,6 @@
  <?php
  // Create connection
-$con=mysqli_connect("localhost","Boffins","Boffins","Boffins");
+$con=mysqli_connect("localhost","root","","breast_feeding");
 
 // Check connection
 if (mysqli_connect_errno($con))
@@ -60,7 +60,7 @@ $message .= '</body></html>';
 //Sending the Content-type header
 $headers  = 'MIME-Version: 1.0' . "\r\n";
 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
-$headers .= 'From: praveen.k.chaubey@gmail.com' . "\r\n";
+
 
 
 // Mail 
